@@ -19,11 +19,13 @@ public class ParkInput {
 		}
 		
 
-	public int inputCustomerIDnumber() {
-			int CustomerIDnumber;
+	public int Identification() {
+			int identification;
 			System.out.printf("주민번호를 입력하세요.\n");
-			CustomerIDnumber = sc.nextInt();
-			return CustomerIDnumber;
+			identification = sc.nextInt();
+							
+			return identification;
+			
 		}
 	
 	public int inputOrdercount() {
@@ -46,7 +48,7 @@ public class ParkInput {
 			return Pretreat;
 		}
 		
-		public int Whether() {
+		public int Ticket_Continue() {
 			int whether;
 			System.out.printf("계속 발권 하시겠습니까?\n");
 			System.out.printf("1. 티켓 발권\n");

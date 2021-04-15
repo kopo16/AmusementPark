@@ -1,33 +1,26 @@
 package ParkTicket;
 
+import java.util.ArrayList;
+
 public class ParkConstvalue {
-	public static final int Adult_DP = 56000;
-	public static final int Adult_NP = 46000;
-	public static final int Teen_DP = 47000;
-	public static final int Teen_NP = 40000;
-	public static final int Kid_DP = 44000;
-	public static final int Kid_NP = 37000;
-	public static final int Old_DP = 44000;
-	public static final int Old_NP = 37000;
-	public static final int Min_Baby = 1;
-	public static final int Min_Kid = 3;
-	public static final int Max_Kid = 12;
-	public static final int Min_Teen = 13;
-	public static final int Max_Teen = 18;
-	public static final int Min_Adult = 19;
-	public static final int Max_Adult = 64;
-	public static final int Baby = 1;
-	public static final int Kid = 2;
-	public static final int Teen = 3;
-	public static final int Adult = 4;
-	public static final int Old = 5;
-	public static final double Disable_discount = 0.6;
-	public static final double Merit_discount = 0.5;
-	public static final double Multichild_discount = 0.8;
-	public static final double Pregnant_discount = 0.85;
-	public static final int Max_Count = 10;
-	public static final int Min_Count = 1;
-	
+	public static int[] DP = {56000, 47000, 44000, 44000, 0};
+	public static int[] NP = {46000, 40000, 37000, 37000, 0};
+	public static final int[] Age_Standard = {64, 18, 12, 65, 2};
+	public static final String[] PersonType = { "대인", "청소년", "소인", "경로", "유아"};
+	public static final String[] TicketType = { "주간권", "야간권"};
+	public static final String[] Priority = { "우대 없음", "장애인 우대적용", "국가유공자 우대적용", "다자녀 우대적용", "임산부 우대적용"};
+	public static final double[] Discount = {1, 0.6, 0.5, 0.8, 0.85};
+	public static int Total_Price = 0;
+	public static int Daycount = 0;
+	public static int Nightcount = 0;
+	public static int[] DaycountType = {0, 0, 0, 0, 0};
+	public static int[] NightcountType = {0, 0, 0, 0, 0};
+	public static int[] Prioritycount = {0, 0, 0, 0, 0};
+	public static int Day_Total_Price = 0;
+	public static int Night_Total_Price = 0;
+	public static int Day_Total_Count = 0;
+	public static int Night_Total_Count = 0;
+	public static ArrayList<String> OneLine_Ticket = new ArrayList<String>();
 	
 	
 
