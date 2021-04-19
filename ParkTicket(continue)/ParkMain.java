@@ -4,25 +4,20 @@ import java.io.IOException;
 
 public class ParkMain {
 	
-	public static int type, inputOrdercount, priortype, age , agesort, price, realprice;
+	public static int type, Ordercount, priortype, age , agesort, price, realprice;
 	public static int reorder, totalprice, continueexit;
-	public static String ageSort, deal;
+	public static String identification, ageSort, deal;
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		int Ticketmenu = 0;
-		String identification;
-		int Ordercount = 0;
-		int Pretreat = 0;
-		int reorder = 0;
 		ParkInput parkinput = new ParkInput();
 		RunPark run = new RunPark();
 		ParkOutput outclass = new ParkOutput();
 		while (true) {
-			Ticketmenu = parkinput.inputFromConsoleTicket();
+			type = parkinput.inputFromConsoleTicket();
 			identification = parkinput.Identification();
 			Ordercount = parkinput.inputOrdercount();
-			Pretreat = parkinput.inputPretreat();
+			priortype = parkinput.inputPretreat();
 			age = run.ageCal(identification);
 			agesort = run.Agesort(age);
 			price = run.PriceCal(type, age);
